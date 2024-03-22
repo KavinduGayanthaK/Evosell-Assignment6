@@ -1,0 +1,49 @@
+.shadow-card {
+    box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 7px
+}
+.welcome{
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+}
+.evocell{
+    color: blue;
+    font-weight: bold;
+    font-size: 30px;
+}
+#main{
+    margin-top: 100px;
+    margin-left: 500px;
+    position: absolute;
+    width: 30vw;
+    height: 70vh;
+    border-radius: 15px;
+}
+
+.userName{
+    width: 22vw;
+}
+.password{
+    width: 22vw;
+}
+.form{
+    width:28vw ;
+    height: 68vh;
+    border-radius: 15px;
+}
+
+.signIn{
+    margin-top: 40px;
+    margin-left: 20px;
+    font-size: 20px;
+    background: #1154BF;
+}
+
+.passwordHelp{
+    margin-left: 220px;
+    font-weight: bold;
+}
+
+.noAcc{
+    margin-top: 50px;
+}
