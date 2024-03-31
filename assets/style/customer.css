@@ -1,0 +1,71 @@
+.main{
+    background: #ffffff;
+    width: 100vw;
+    height: 13vh;
+    border-radius: 0 0 15px 15px;
+    box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 7px
+
+}
+
+.setting{
+    margin-left: 1000px;
+}
+.logout-button{
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    background: white;
+
+}
+
+.search{
+    width: 100vw;
+    height: 10vh;
+    margin-top: 25px;
+    position: relative;
+
+}
+
+.st{
+    margin-left: 25px;
+    position: absolute;
+}
+.addCustomer{
+    background: #1154BF;
+    position: absolute;
+    margin-right: 0;
+
+}
+.b{
+    margin-right: 10px;
+}
+
+.row.drow{
+    --bs-gutter-x: 1.5rem;
+    margin-right: calc(0* var(--bs-gutter-x));
+}
+.col-6.dSearch{
+    width: 45%;!important;
+    margin-left: 10px;
+}
+
+.cTable{
+    margin: 20px 10px 0 10px;
+    border: 2px solid #c4c0c0;
+    border-radius: 18px;
+
+
+}
+.customerTable{
+    padding: 20px;
+    overflow-x: auto;
+
+
+}
+
+.cTable>h1{
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 10PX 0 10PX 10PX;
+}
