@@ -1,0 +1,72 @@
+.logout-button{
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    background: white;
+
+}
+.main{
+    background: #ffffff;
+    width: 100vw;
+    height: 13vh;
+    border-radius: 0 0 15px 15px;
+    box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 7px
+
+}
+.b{
+    margin-right: 10px;
+}
+
+.st{
+    margin-left: 25px;
+    position: absolute;
+}
+.addCustomer{
+    background: #1154BF;
+    position: absolute;
+    margin-right: 0;
+
+}
+
+.row.drow{
+    --bs-gutter-x: 1.5rem;
+    margin-right: calc(0* var(--bs-gutter-x));
+}
+.col-6.dSearch{
+    width: 45%;!important;
+    margin-left: 10px;
+}
+
+.iTable{
+    margin: 20px 10px 0 80px;
+    border: 2px solid #c4c0c0;
+    border-radius: 18px;
+    height: 460px;
+    overflow: auto;
+    width: 90vw;
+}
+.itemTable{
+    padding: 20px;
+
+}
+
+.iTable>h1{
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 10PX 0 10PX 10PX;
+}
+
+.search{
+    width: 100vw;
+    height: 10vh;
+    margin-top: 25px;
+    position: relative;
+
+}
+.shadow-card {
+    box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 7px
+}
+/*body{*/
+/*    overflow: hidden;*/
+/*}*/
