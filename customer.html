@@ -54,17 +54,54 @@
         <form class="g-3">
 
             <div class="row drow">
-
                 <div class="col-6 dSearch">
                     <input type="text" class="form-control" id="inputPassword2" placeholder="Search customer NIC">
                 </div>
                 <div class="col-6  text-end" >
-                    <button type="submit" class="btn btn-primary mb-3">ADD CUSTOMER</button>
+                    <button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#exampleModal">ADD CUSTOMER</button>
                 </div>
-
             </div>
-
         </form>
+
+        <!--Add new Customer-->
+        <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content mdiv">
+                    <div class="modal-header">
+                        <h1 class="modal-title  mheader" id="exampleModalLabel">Create a new customer</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group mb- cus">
+                            <label for="customerId">Customer ID</label>
+                            <input type="text" id="customerId" class="form-control">
+                        </div>
+                        <div class="form-group mb- cus">
+                            <label for="customerName">Customer Name</label>
+                            <input type="text" id="customerName" class="form-control">
+                        </div>
+                        <div class="form-group mb- cus">
+                            <label for="customerAddress">Customer Address</label>
+                            <input type="text" id="customerAddress" class="form-control">
+                        </div>
+                        <div class="form-group mb- cus">
+                            <label for="customerEmail">Customer Email</label>
+                            <input type="email" id="customerEmail" class="form-control">
+                        </div>
+                        <div class="form-group mb- cus">
+                            <label for="customerNic">Customer NIC</label>
+                            <input type="text" id="customerNic" class="form-control">
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
+                        <button type="button" class="btn btn-primary">CREATE CUSTOMER</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!--Customer table-->
     <div class="cTable">

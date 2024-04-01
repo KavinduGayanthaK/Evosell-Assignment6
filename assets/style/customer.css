@@ -53,14 +53,13 @@
     margin: 20px 10px 0 10px;
     border: 2px solid #c4c0c0;
     border-radius: 18px;
-
+    height: 460px;
+    overflow: auto;
+    width: 98vw;
 
 }
 .customerTable{
     padding: 20px;
-    overflow-x: auto;
-
-
 }
 
 .cTable>h1{
@@ -68,4 +67,54 @@
     font-weight: bold;
     font-size: 30px;
     margin: 10PX 0 10PX 10PX;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/*Add new customer modal*/
+.mdiv{
+    height: 85vh;
+    justify-content: center;
+}
+.mheader{
+    font-size: 30px;
+    font-family: Inter;
+    font-weight: bold;
+}
+
+.cus>label{
+    font-family: Inter;
+    font-weight: bold;
+}
+
+.cus{
+    margin-bottom: 15px;
+}
+
+.cus>input{
+    border: 1px solid #a6a6a6;
+    height: 45px;
 }
