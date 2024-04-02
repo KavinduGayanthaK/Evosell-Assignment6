@@ -70,3 +70,28 @@
 /*body{*/
 /*    overflow: hidden;*/
 /*}*/
+
+/*Add new customer modal*/
+.mdiv{
+    height: 80vh;
+    justify-content: center;
+}
+.mheader{
+    font-size: 30px;
+    font-family: Inter;
+    font-weight: bold;
+}
+
+.cus>label{
+    font-family: Inter;
+    font-weight: bold;
+}
+
+.cus{
+    margin-bottom: 15px;
+}
+
+.cus>input{
+    border: 1px solid #a6a6a6;
+    height: 45px;
+}
