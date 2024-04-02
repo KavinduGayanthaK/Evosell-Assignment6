@@ -13,8 +13,8 @@
 }
 #main{
     margin-top: 100px;
-    margin-left: 500px;
-    position: absolute;
+    /*margin-left: 500px;*/
+    /*position: absolute;*/
     width: 30vw;
     height: 70vh;
     border-radius: 15px;
