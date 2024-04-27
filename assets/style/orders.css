@@ -1,0 +1,223 @@
+
+/*body{overflow: hidden;*/
+/*    height: auto;*/
+/*}*/
+*{
+    box-sizing: border-box;
+}
+.shadow-card {
+    box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 7px
+}
+.main{
+    /*background: #ffffff;*/
+    /*width: 100%;*/
+    /*height: 13vh;*/
+    /*border-radius: 0 0 15px 15px;*/
+    /*box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 7px*/
+
+}
+
+.setting{
+    margin-left: 1000px;
+}
+.logout-button{
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    background: white;
+
+}
+.b{
+    margin-right: 10px;
+}
+section{
+    /*height: auto;*/
+    /*width: 100%;*/
+    /*overflow-x: auto;*/
+    /*justify-content: space-between;*/
+}
+
+.dd {
+    height: 201.6px;
+    width: 401.6px;
+}
+
+.addItem{
+    width: 30vw;!important;
+    margin: 30px;
+    box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 7px
+}
+.dd{
+
+    position: relative;
+}
+
+.itemCode{
+    width: 15vw;
+    position: absolute;
+}
+label {
+    font-weight: bold;
+    font-family: Inter;
+}
+
+
+
+.addButton:hover{
+    transform: scale(1.1);
+}
+
+/*Add OrderDetails card*/
+.addOrder{
+    width: 30vw;!important;
+    margin: 30px;
+    box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 7px
+}
+.OrderID{
+    width: 15vw;
+    position: absolute;
+}
+.customerId{
+    width: 15vw;
+    position: absolute;
+    margin-top: 90px;
+}
+.date{
+    width: 9vw;
+    position: absolute;
+    margin-left: 250px;
+}
+.customerName{
+    width:9vw;
+    position: absolute;
+    margin-left: 250px;
+    margin-top: 90px;
+}
+.addOrderButton{
+    margin-left: 300px;
+    background-color: #ffc107;!important;
+    border-radius: 10px;
+    height: 50px;
+    width: 8vw;
+    border: 0px;
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/*Add invoice card*/
+.invoice{
+    position: absolute;
+    width: 40vw;
+    box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 7px
+}
+.selectBox{
+    margin-top: 10px;
+}
+.selectBox>input{
+    margin-left: 20px;
+    margin-top: 0;
+}
+.selectBox>label{
+    font-weight: normal;
+    font-family: Inter;
+}
+.selectBox>h6{
+
+    font-family: Inter;
+    font-weight: bold;
+}
+
+.Total{
+    margin-top: 40px;
+}
+.Total>label{
+    font-family: Inter;
+    font-weight: bold;
+    color: blue;
+    font-size: 30px;
+}
+.Discount{
+    margin-top: 8px;
+}
+.Discount>label{
+    font-family: Inter;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.NetTotal{
+    margin-top: 8px;
+}
+.NetTotal>label{
+    font-family: Inter;
+    font-weight: bold;
+    font-size:30px;
+    color: red;
+    margin-left: 5px;
+
+}
+.purchaseButton{
+    margin-top: 25px;
+    margin-left: 450px;
+
+}
+.purchaseButton>button{
+    background-color: #ffc107;
+    border-radius: 10px;
+    height: 50px;
+    width: 130px;
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 20px;
+    border: 0px;
+}
+
+/*main div 1*/
+.md{
+    width: 40vw;
+    height: 80vh;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+.md2{
+    margin: 70px 0 0 60px;
+    height: 80vh;!important;
+    width: 50vw;
+}
+
+/*Cart table*/
+.cTable{
+    position: absolute;
+    margin: 800px 10px 0 80px;
+    border: 2px solid #c4c0c0;
+    border-radius: 18px;
+    height: 460px;
+    overflow: auto;
+    width: 0vw;
+}
+.cartTable>h1{
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 10PX 0 10PX 10PX;
+}
+.cartTable{
+    margin-left: 80px;
+}
+
+/*View all order button*/
+.viewOrderBtn{
+    margin-left: 20px; /* Adjust as needed */
+    margin-top: 20px;
+    width: 10vw;
+    height: 10vh ;
+    /*margin: 20px 0 0 1320px;*/
+}
+.viewOrderBtn>button{
+    border: 0;
+    color: white;
+    font-family: Inter;
+}
+.mdal{
+    width: 1000px;!important;
+}
