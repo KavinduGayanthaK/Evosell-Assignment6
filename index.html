@@ -393,6 +393,265 @@
 </section>
 
 
+<!--order section-->
+<section id="order-section" style="margin-top: 80px" class="pb-5">
+    <div class="d-flex justify-content-end mt-3 me-3">
+        <button class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#myModal">VIEW ALL ORDER</button>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-5 ">
+            <!--Add item card-->
+            <div class="card shadow-card mb-3 ms-3">
+                <div class="card-body">
+                    <h2 class="card-title">Add Item</h2>
+
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="form-group">
+                                <label for="item-code">Item Code</label>
+                                <input type="text" id="item-code" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="item-qty">Qty</label>
+                                <input type="text" id="item-qty" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-7">
+                            <div class="form-group">
+                                <label for="item-name">Item Name</label>
+                                <input type="text" id="item-name" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="item-price">Price</label>
+                                <input type="text" id="item-price" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-lg mt-3 fw-bold">CREATE</button>
+                </div>
+            </div>
+
+            <!--Add OrderDetails card-->
+            <div class="card shadow-card mb-3 ms-3">
+                <div class="card-body">
+                    <h2 class="card-title">Order Details</h2>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="form-group ">
+                                <label for="OrderID">Order Id</label>
+                                <input type="text" id="OrderID" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group  ">
+                                <label for="customerId">Customer Id</label>
+                                <input type="text" id="customerId-order" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="form-group  ">
+                                <label for="date">Date</label>
+                                <input type="date" id="date" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-md-5">
+                            <div class="form-group  ">
+                                <label for="customerName">Customer Name</label>
+                                <input type="text" id="customerName-order" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary mt-3 btn-lg fw-bold">CREATE</button>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <!--Add invoice card-->
+            <div class="card me-3">
+                <div class="card-body">
+                    <h2 class="card-title ms-2">Invoice</h2>
+                    <div class="row">
+                        <div class="d-flex justify-content-around">
+                            <h5 class="justify-content-start">Select payment type</h5>
+                            <div class="form-check ">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                       id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Cash
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                       id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Card
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-7">
+                            <div class="form-group mb- cash">
+                                <label for="OrderID">Cash</label>
+                                <input type="text" id="cash" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-md-5">
+                            <div class="form-group mb- discount">
+                                <label for="date">Discount</label>
+                                <input type="text" id="discount" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="form-group mb- balance">
+                                <label for="customerId">Balance</label>
+                                <input type="text" id="balance" class="form-control">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group mb- Total">
+                                <label>Total</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group mb- Discount">
+                                <label> Discount</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group mb- NetTotal">
+                                <label>Net Total</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary mt-3 fw-bold btn-lg">PURCHASE</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Customer table-->
+    <div class="row justify-content-center m-2 ">
+        <div class="  col-lg-10   border border-light-subtle  mt-3  rounded shadow-card">
+            <h1>Cart</h1>
+            <div class="table-responsive">
+                <table class="p-5 table ">
+                    <!--Customer head-->
+                    <thead>
+                    <th>Item Code</th>
+                    <th>Item Name</th>
+                    <th>Item Price</th>
+                    <th>Qty</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                    </thead>
+                    <!--Customer body-->
+                    <tbody>
+                    <tr>
+                        <td>I001</td>
+                        <td>Sunlight</td>
+                        <td>150.00</td>
+                        <td>3</td>
+                        <td>450.00</td>
+                        <td>
+                            <button>remove</button>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- View all order Modal -->
+    <div class="modal mdal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal Heading</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer Id</th>
+                            <th>Customer Name</th>
+                            <th>Item Code</th>
+                            <th>Item Name</th>
+                            <th>Qty</th>
+                            <th>Total </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>john@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>Mary</td>
+                            <td>Moe</td>
+                            <td>mary@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>July</td>
+                            <td>Dooley</td>
+                            <td>july@example.com</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
 <script src="assets/js/barchart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
