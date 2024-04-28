@@ -6,6 +6,10 @@
     box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 7px
 
 }
+.shadow-card {
+    box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 7px
+}
+
 
 .setting{
     margin-left: 1000px;
