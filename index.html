@@ -206,102 +206,7 @@
                 </thead>
                 <!--Customer body-->
                 <tbody id="customer-table-body">
-<!--                <tr>-->
-<!--                    <td>C001</td>-->
-<!--                    <td>Kavindu Gayantha</td>-->
-<!--                    <td>Pragathimawatha,Diyalagoda,Maggona</td>-->
-<!--                    <td>gayanthakavindu3@gmail.com</td>-->
-<!--                    <td>200117802995</td>-->
-<!--                    <td><button>delete</button></td>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td>C001</td>-->
-<!--                    <td>Kavindu Gayantha</td>-->
-<!--                    <td>Pragathimawatha,Diyalagoda,Maggona</td>-->
-<!--                    <td>gayanthakavindu3@gmail.com</td>-->
-<!--                    <td>200117802995</td>-->
-<!--                    <td><button>delete</button></td>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td>C001</td>-->
-<!--                    <td>Kavindu Gayantha</td>-->
-<!--                    <td>Pragathimawatha,Diyalagoda,Maggona</td>-->
-<!--                    <td>gayanthakavindu3@gmail.com</td>-->
-<!--                    <td>200117802995</td>-->
-<!--                    <td><button>delete</button></td>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td>C001</td>-->
-<!--                    <td>Kavindu Gayantha</td>-->
-<!--                    <td>Pragathimawatha,Diyalagoda,Maggona</td>-->
-<!--                    <td>gayanthakavindu3@gmail.com</td>-->
-<!--                    <td>200117802995</td>-->
-<!--                    <td><button>delete</button></td>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td>C001</td>-->
-<!--                    <td>Kavindu Gayantha</td>-->
-<!--                    <td>Pragathimawatha,Diyalagoda,Maggona</td>-->
-<!--                    <td>gayanthakavindu3@gmail.com</td>-->
-<!--                    <td>200117802995</td>-->
-<!--                    <td><button>delete</button></td>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td>C001</td>-->
-<!--                    <td>Kavindu Gayantha</td>-->
-<!--                    <td>Pragathimawatha,Diyalagoda,Maggona</td>-->
-<!--                    <td>gayanthakavindu3@gmail.com</td>-->
-<!--                    <td>200117802995</td>-->
-<!--                    <td><button>delete</button></td>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td>C001</td>-->
-<!--                    <td>Kavindu Gayantha</td>-->
-<!--                    <td>Pragathimawatha,Diyalagoda,Maggona</td>-->
-<!--                    <td>gayanthakavindu3@gmail.com</td>-->
-<!--                    <td>200117802995</td>-->
-<!--                    <td><button>delete</button></td>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td>C001</td>-->
-<!--                    <td>Kavindu Gayantha</td>-->
-<!--                    <td>Pragathimawatha,Diyalagoda,Maggona</td>-->
-<!--                    <td>gayanthakavindu3@gmail.com</td>-->
-<!--                    <td>200117802995</td>-->
-<!--                    <td><button>delete</button></td>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td>C001</td>-->
-<!--                    <td>Kavindu Gayantha</td>-->
-<!--                    <td>Pragathimawatha,Diyalagoda,Maggona</td>-->
-<!--                    <td>gayanthakavindu3@gmail.com</td>-->
-<!--                    <td>200117802995</td>-->
-<!--                    <td><button>delete</button></td>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td>C001</td>-->
-<!--                    <td>Kavindu Gayantha</td>-->
-<!--                    <td>Pragathimawatha,Diyalagoda,Maggona</td>-->
-<!--                    <td>gayanthakavindu3@gmail.com</td>-->
-<!--                    <td>200117802995</td>-->
-<!--                    <td><button>delete</button></td>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td>C001</td>-->
-<!--                    <td>Kavindu Gayantha</td>-->
-<!--                    <td>Pragathimawatha,Diyalagoda,Maggona</td>-->
-<!--                    <td>gayanthakavindu3@gmail.com</td>-->
-<!--                    <td>200117802995</td>-->
-<!--                    <td><button>delete</button></td>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td>C001</td>-->
-<!--                    <td>Kavindu Gayantha</td>-->
-<!--                    <td>Pragathimawatha,Diyalagoda,Maggona</td>-->
-<!--                    <td>gayanthakavindu3@gmail.com</td>-->
-<!--                    <td>200117802995</td>-->
-<!--                    <td><button>delete</button></td>-->
-<!--                </tr>-->
+
 
                 </tbody>
             </table>
@@ -353,7 +258,7 @@
                         <input type="text" id="ItemPrice" class="form-control">
                     </div>
                     <div class="form-group mb- cus">
-                        <label for="ItemQty">Customer Email</label>
+                        <label for="ItemQty">Item Qty</label>
                         <input type="number" id="ItemQty" class="form-control">
                     </div>
 
@@ -361,7 +266,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
-                    <button type="button" class="btn btn-primary">CREATE NEW ITEM</button>
+                    <button type="button" class="btn btn-primary" id="createItemBtn">CREATE NEW ITEM</button>
                 </div>
             </div>
         </div>
@@ -381,18 +286,7 @@
                     <th>Action</th>
                     </thead>
                     <!--Item table body-->
-                    <tbody>
-                    <tr>
-                        <td>I001</td>
-                        <td>Sunlight</td>
-                        <td>150.00</td>
-                        <td>100</td>
-                        <td>
-                            <button>delete</button>
-                            <button data-bs-toggle="modal" data-bs-target="#exampleModal1">update</button>
-                        </td>
-                    </tr>
-
+                    <tbody id="item-table-body">
 
                     </tbody>
                 </table>
@@ -409,27 +303,27 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group mb- cus">
-                        <label for="ItemCode">Item Code</label>
-                        <input type="text" id="ItemCode1" class="form-control">
+                        <label for="ItemCode-update">Item Code</label>
+                        <input type="text" id="ItemCode-update" class="form-control">
                     </div>
                     <div class="form-group mb- cus">
-                        <label for="ItemName">Item Name</label>
-                        <input type="text" id="ItemName1" class="form-control">
+                        <label for="ItemName-update">Item Name</label>
+                        <input type="text" id="ItemName-update" class="form-control">
                     </div>
                     <div class="form-group mb- cus">
-                        <label for="ItemPrice">Item Price</label>
-                        <input type="text" id="ItemPrice1" class="form-control">
+                        <label for="ItemPrice-update">Item Price</label>
+                        <input type="text" id="ItemPrice-update" class="form-control">
                     </div>
                     <div class="form-group mb- cus">
-                        <label for="ItemQty">Customer Email</label>
-                        <input type="number" id="ItemQty1" class="form-control">
+                        <label for="ItemQty-update">Customer Email</label>
+                        <input type="number" id="ItemQty-update" class="form-control">
                     </div>
 
 
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
-                    <button type="button" class="btn btn-primary">UPDATE</button>
+                    <button type="button" class="btn btn-primary" id="update-item-btn">UPDATE</button>
                 </div>
             </div>
         </div>
@@ -453,33 +347,33 @@
                     <div class="row">
                         <div class="col-md-7">
                             <div class="form-group">
-                                <label for="item-code">Item Code</label>
-                                <input type="text" id="item-code" class="form-control">
+                                <label for="item-code-order">Item Code</label>
+                                <input type="text" id="item-code-order" class="form-control">
                             </div>
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
-                                <label for="item-qty">Qty</label>
-                                <input type="text" id="item-qty" class="form-control">
+                                <label for="item-qty-order">Qty</label>
+                                <input type="text" id="item-qty-order" class="form-control">
                             </div>
                         </div>
                     </div>
                     <div class="row mt-3">
                         <div class="col-md-7">
                             <div class="form-group">
-                                <label for="item-name">Item Name</label>
-                                <input type="text" id="item-name" class="form-control">
+                                <label for="item-name-order">Item Name</label>
+                                <input type="text" id="item-name-order" class="form-control">
                             </div>
                         </div>
                         <div class="col-md-5">
                             <div class="form-group">
-                                <label for="item-price">Price</label>
-                                <input type="text" id="item-price" class="form-control">
+                                <label for="item-price-order">Price</label>
+                                <input type="text" id="item-price-order" class="form-control">
                             </div>
                         </div>
                     </div>
 
-                    <button class="btn btn-primary btn-lg mt-3 fw-bold">CREATE</button>
+                    <button class="btn btn-primary btn-lg mt-3 fw-bold" id="create-itembtn-order">CREATE</button>
                 </div>
             </div>
 
@@ -496,8 +390,8 @@
                         </div>
                         <div class="col-md-5">
                             <div class="form-group  ">
-                                <label for="customerId">Customer Id</label>
-                                <input type="text" id="customerId-order" class="form-control">
+                                <label for="customerNic-order">Customer Nic</label>
+                                <input type="text" id="customerNic-order" class="form-control">
                             </div>
                         </div>
                     </div>
@@ -512,7 +406,7 @@
 
                         <div class="col-md-5">
                             <div class="form-group  ">
-                                <label for="customerName">Customer Name</label>
+                                <label for="customerName-order">Customer Name</label>
                                 <input type="text" id="customerName-order" class="form-control">
                             </div>
                         </div>
@@ -623,16 +517,9 @@
                     <th>Action</th>
                     </thead>
                     <!--Customer body-->
-                    <tbody>
+                    <tbody id="cart-table-body">
                     <tr>
-                        <td>I001</td>
-                        <td>Sunlight</td>
-                        <td>150.00</td>
-                        <td>3</td>
-                        <td>450.00</td>
-                        <td>
-                            <button>remove</button>
-                        </td>
+
                     </tr>
 
                     </tbody>
@@ -702,6 +589,9 @@
         crossorigin="anonymous"></script>
 
 <script src="assets/js/applySpa.js"></script>
-<script src="assets/js/customer.js"></script>
+<script type="module" src="assets/mvc/controller/customerController.js"></script>
+<script type="module" src="assets/mvc/controller/itemController.js"></script>
+<script type="module" src="assets/mvc/controller/orderController.js"></script>
+
 </body>
 </html>
