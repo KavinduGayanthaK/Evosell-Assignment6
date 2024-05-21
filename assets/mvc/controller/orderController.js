@@ -56,7 +56,13 @@ function loadTableCart() {
         $('#cart-table-body').append(record);
     });
 
+    let total = 0;
+    for (let i = 0; i < cartArray.length; i++) {
 
+        total += cartArray[i].total;
+    }
+    $('#total-label').text(total);
+    $('#net-total-label').text(total);
 }
 
 //cart table remove button action
