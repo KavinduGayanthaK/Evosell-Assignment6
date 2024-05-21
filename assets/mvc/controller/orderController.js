@@ -84,6 +84,16 @@ $("#customerNic-order").on('keyup', function (e) {
     }
 });
 
+//discount action
+$('#discount').on('keyup', function (e) {
+    if (e.key === 'Enter' || e.keyCode === 13) {
+        let discountPercentage = $('#discount').val();
+        let total = $('#total-label').text();
+        let discountPrice = (total / 100) * discountPercentage;
+        $('#discount-label').text(discountPrice);
+        $('#net-total-label').text(total - discountPrice);
+    }
+});
 
 
 //set date
