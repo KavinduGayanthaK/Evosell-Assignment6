@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -105,86 +105,60 @@
                 <div class="col-6 dSearch">
                     <input type="text" class="form-control" id="inputPassword2" placeholder="Search customer NIC">
                 </div>
-                <div class="col-6  text-end" >
-                    <button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#exampleModal">ADD CUSTOMER</button>
+                <div class="col-6  text-end">
+                    <button id="add-customer-btn" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal-customer">
+                        ADD CUSTOMER
+                    </button>
                 </div>
             </div>
         </form>
 
         <!--Add new Customer-->
-        <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade " id="exampleModal-customer" tabindex="-1" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content mdiv">
                     <div class="modal-header">
-                        <h1 class="modal-title  mheader" id="exampleModalLabel">Create a new customer</h1>
+                        <h1 class="modal-title  mheader" id="exampleModalLabel-customer">Create a new customer</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <div class="form-group mb- cus">
-                            <label for="customerId">Customer ID</label>
-                            <input type="text" id="customerId" class="form-control">
-                        </div>
-                        <div class="form-group mb- cus">
-                            <label for="customerName">Customer Name</label>
-                            <input type="text" id="customerName" class="form-control">
-                        </div>
-                        <div class="form-group mb- cus">
-                            <label for="customerAddress">Customer Address</label>
-                            <input type="text" id="customerAddress" class="form-control">
-                        </div>
-                        <div class="form-group mb- cus">
-                            <label for="customerEmail">Customer Email</label>
-                            <input type="email" id="customerEmail" class="form-control">
-                        </div>
-                        <div class="form-group mb- cus">
-                            <label for="customerNic">Customer NIC</label>
-                            <input type="text" id="customerNic" class="form-control">
-                        </div>
-
-
+                        <form id="customerForm" class="needs-validation" novalidate>
+                            <div class="form-group mb- cus">
+                                <label for="customerId">Customer ID</label>
+                                <input type="text" id="customerId" class="form-control" required>
+                                <div id="customer-id-label" class="invalid-feedback"></div>
+                            </div>
+                            <div class="form-group mb- cus">
+                                <label for="customerName">Customer Name</label>
+                                <input type="text" id="customerName" class="form-control" required>
+                                <div id="customer-name-label" class="invalid-feedback"></div>
+                            </div>
+                            <div class="form-group mb- cus">
+                                <label for="customerAddress">Customer Address</label>
+                                <input type="text" id="customerAddress" class="form-control" required>
+                                <div id="customer-address-label" class="invalid-feedback"></div>
+                            </div>
+                            <div class="form-group mb- cus">
+                                <label for="customerEmail">Customer Email</label>
+                                <input type="email" id="customerEmail" class="form-control" required>
+                                <div id="customer-email-label" class="invalid-feedback"></div>
+                            </div>
+                            <div class="form-group mb- cus">
+                                <label for="customerNic">Customer NIC</label>
+                                <input type="text" id="customerNic" class="form-control" required>
+                                <div id="customer-nic-label" class="invalid-feedback"></div>
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE
+                                </button>
+                                <button type="submit" class="btn btn-primary" id="create-customer-btn">CREATE
+                                    CUSTOMER
+                                </button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
-                        <button type="button" class="btn btn-primary" id="create-customer">CREATE CUSTOMER</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--Update Customer-->
-    <div class="modal fade " id="exampleModal-update" tabindex="-1" aria-labelledby="exampleModalLabel-updateCustomer" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content mdiv">
-                <div class="modal-header">
-                    <h1 class="modal-title  mheader" id="exampleModalLabel-updateCustomer">Update customer</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group mb- cus">
-                        <label for="customerId">Customer ID</label>
-                        <input type="text" id="customerId-update" class="form-control">
-                    </div>
-                    <div class="form-group mb- cus">
-                        <label for="customerName">Customer Name</label>
-                        <input type="text" id="customerName-update" class="form-control">
-                    </div>
-                    <div class="form-group mb- cus">
-                        <label for="customerAddress">Customer Address</label>
-                        <input type="text" id="customerAddress-update" class="form-control">
-                    </div>
-                    <div class="form-group mb- cus">
-                        <label for="customerEmail">Customer Email</label>
-                        <input type="email" id="customerEmail-update" class="form-control">
-                    </div>
-                    <div class="form-group mb- cus">
-                        <label for="customerNic">Customer NIC</label>
-                        <input type="text" id="customerNic-update" class="form-control">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
-                    <button type="button" class="btn btn-primary" id="update-customer-button">UPDATE CUSTOMER</button>
                 </div>
             </div>
         </div>
@@ -226,8 +200,8 @@
                     <input type="text" class="form-control" id="inputPassword3" placeholder="Search Item Name">
                 </div>
                 <div class="col-6  text-end">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-item">
-                        ADD ITEM
+                    <button id="add-item-btn" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal-item">ADD ITEM
                     </button>
                 </div>
 
@@ -237,7 +211,8 @@
     </div>
 
     <!--Add new Item-->
-    <div class="modal fade " id="exampleModal-item" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade " id="exampleModal-item" tabindex="-1" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content mdiv">
                 <div class="modal-header">
@@ -245,28 +220,38 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="form-group mb- cus">
-                        <label for="ItemCode">Item Code</label>
-                        <input type="text" id="ItemCode" class="form-control">
-                    </div>
-                    <div class="form-group mb- cus">
-                        <label for="ItemName">Item Name</label>
-                        <input type="text" id="ItemName" class="form-control">
-                    </div>
-                    <div class="form-group mb- cus">
-                        <label for="ItemPrice">Item Price</label>
-                        <input type="text" id="ItemPrice" class="form-control">
-                    </div>
-                    <div class="form-group mb- cus">
-                        <label for="ItemQty">Item Qty</label>
-                        <input type="number" id="ItemQty" class="form-control">
-                    </div>
+                    <form id="itemForm" class="needs-validation" novalidate>
+                        <div class="form-group mb- cus">
+                            <label for="ItemCode">Item Code</label>
+                            <input type="text" id="ItemCode" class="form-control" required>
+                            <div id="item-label" class="invalid-feedback">item code is a required field: Pattern(I001)
+                            </div>
+                        </div>
+                        <div class="form-group mb- cus">
+                            <label for="ItemName">Item Name</label>
+                            <input type="text" id="ItemName" class="form-control" required>
+                            <div id="item-name-label" class="invalid-feedback">
+                                Item name is required field:Minimum 5,max 20,space allowed
+                            </div>
+                        </div>
+                        <div class="form-group mb- cus">
+                            <label for="ItemPrice">Item Price</label>
+                            <input type="text" id="ItemPrice" class="form-control" required>
+                            <div id="item-price-label" class="invalid-feedback"></div>
+                        </div>
+                        <div class="form-group mb- cus">
+                            <label for="ItemQty">Item Qty</label>
+                            <input type="number" id="ItemQty" class="form-control" required>
+                            <div id="item-qty-label" class="invalid-feedback">
 
+                            </div>
+                        </div>
 
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
-                    <button type="button" class="btn btn-primary" id="createItemBtn">CREATE NEW ITEM</button>
+                        <div>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
+                            <button type="submit" class="btn btn-primary" id="createItemBtn">CREATE NEW ITEM</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -293,48 +278,14 @@
             </div>
         </div>
     </div>
-    <!--Update Item-->
-    <div class="modal fade " id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content mdiv">
-                <div class="modal-header">
-                    <h1 class="modal-title  mheader" id="exampleModalLabel1">Update Item</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group mb- cus">
-                        <label for="ItemCode-update">Item Code</label>
-                        <input type="text" id="ItemCode-update" class="form-control">
-                    </div>
-                    <div class="form-group mb- cus">
-                        <label for="ItemName-update">Item Name</label>
-                        <input type="text" id="ItemName-update" class="form-control">
-                    </div>
-                    <div class="form-group mb- cus">
-                        <label for="ItemPrice-update">Item Price</label>
-                        <input type="text" id="ItemPrice-update" class="form-control">
-                    </div>
-                    <div class="form-group mb- cus">
-                        <label for="ItemQty-update">Customer Email</label>
-                        <input type="number" id="ItemQty-update" class="form-control">
-                    </div>
 
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
-                    <button type="button" class="btn btn-primary" id="update-item-btn">UPDATE</button>
-                </div>
-            </div>
-        </div>
-    </div>
 </section>
-
 
 <!--order section-->
 <section id="order-section" style="margin-top: 80px" class="pb-5">
     <div class="d-flex justify-content-end mt-3 me-3">
-        <button class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#myModal">VIEW ALL ORDER</button>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-order">VIEW ALL ORDER
+        </button>
     </div>
 
     <div class="row mt-3">
@@ -342,79 +293,92 @@
             <!--Add item card-->
             <div class="card shadow-card mb-3 ms-3">
                 <div class="card-body">
-                    <h2 class="card-title">Add Item</h2>
+                    <form id="itemForm-order" class="needs-validation" novalidate>
+                        <h2 class="card-title">Add Item</h2>
 
-                    <div class="row">
-                        <div class="col-md-7">
-                            <div class="form-group">
-                                <label for="item-code-order">Item Code</label>
-                                <input type="text" id="item-code-order" class="form-control">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <label for="item-code-order">Item Code</label>
+                                    <input type="text" id="item-code-order" class="form-control" required>
+                                    <div id="item-label1" class="invalid-feedback">item code is a required field:
+                                        Pattern(I001)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label for="item-qty-order">Qty</label>
+                                    <input type="text" id="item-qty-order" class="form-control" required>
+                                    <div id="item-qty-label1" class="invalid-feedback"></div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label for="item-qty-order">Qty</label>
-                                <input type="text" id="item-qty-order" class="form-control">
+                        <div class="row mt-3">
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <label for="item-name-order">Item Name</label>
+                                    <input type="text" id="item-name-order" class="form-control" required>
+                                    <div id="item-name-label1" class="invalid-feedback">
+                                        Item name is required field:Minimum 5,max 20,space allowed
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label for="item-price-order">Price</label>
+                                    <input type="text" id="item-price-order" class="form-control" required>
+                                    <div id="item-price-label1" class="invalid-feedback"></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-md-7">
-                            <div class="form-group">
-                                <label for="item-name-order">Item Name</label>
-                                <input type="text" id="item-name-order" class="form-control">
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="form-group">
-                                <label for="item-price-order">Price</label>
-                                <input type="text" id="item-price-order" class="form-control">
-                            </div>
-                        </div>
-                    </div>
 
-                    <button class="btn btn-primary btn-lg mt-3 fw-bold" id="create-itembtn-order">CREATE</button>
+                        <button type="button" class="btn btn-primary btn-lg mt-3 fw-bold" id="create-itembtn-order">
+                            CREATE
+                        </button>
+
+                    </form>
                 </div>
             </div>
 
             <!--Add OrderDetails card-->
             <div class="card shadow-card mb-3 ms-3">
                 <div class="card-body">
-                    <h2 class="card-title">Order Details</h2>
-                    <div class="row">
-                        <div class="col-md-7">
-                            <div class="form-group ">
-                                <label for="OrderID">Order Id</label>
-                                <input type="text" id="OrderID" class="form-control">
+                    <form id="orderDetailForm-order" class="needs-validation" novalidate>
+                        <h2 class="card-title">Order Details</h2>
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="form-group ">
+                                    <label for="order-id">Order Id</label>
+                                    <input type="text" id="order-id" class="form-control" disabled>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="form-group  ">
-                                <label for="customerNic-order">Customer Nic</label>
-                                <input type="text" id="customerNic-order" class="form-control">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-7">
-                            <div class="form-group  ">
-                                <label for="date">Date</label>
-                                <input type="date" id="date" class="form-control">
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label for="customerNic-order">Customer Nic</label>
+                                    <input type="text" id="customerNic-order" class="form-control" required>
+                                    <div id="customer-nic-label1" class="invalid-feedback"></div>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="col-md-5">
-                            <div class="form-group  ">
-                                <label for="customerName-order">Customer Name</label>
-                                <input type="text" id="customerName-order" class="form-control">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="form-group  ">
+                                    <label for="date">Date</label>
+                                    <input type="date" id="date" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-md-5">
+                                <div class="form-group  ">
+                                    <label for="customerName-order">Customer Name</label>
+                                    <input type="text" id="customerName-order" class="form-control" required>
+                                    <div id="customer-name-label1" class="invalid-feedback"></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <button class="btn btn-primary mt-3 btn-lg fw-bold">CREATE</button>
-
-
+                    </form>
                 </div>
             </div>
         </div>
@@ -423,91 +387,110 @@
             <!--Add invoice card-->
             <div class="card me-3">
                 <div class="card-body">
-                    <h2 class="card-title ms-2">Invoice</h2>
-                    <div class="row">
-                        <div class="d-flex justify-content-around">
-                            <h5 class="justify-content-start">Select payment type</h5>
-                            <div class="form-check ">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                       id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    Cash
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                       id="flexRadioDefault2" checked>
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Card
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row mt-3">
-                        <div class="col-md-7">
-                            <div class="form-group mb- cash">
-                                <label for="OrderID">Cash</label>
-                                <input type="text" id="cash" class="form-control">
+                    <form id="orderDetailForm-invoice" class="needs-validation" novalidate>
+                        <h2 class="card-title ms-2">Invoice</h2>
+                        <div class="row">
+                            <div class="d-flex justify-content-around">
+                                <h5 class="justify-content-start">Select payment type</h5>
+                                <div class="form-check ">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                           id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Cash
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                           id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        Card
+                                    </label>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="col-md-5">
-                            <div class="form-group mb- discount">
-                                <label for="date">Discount</label>
-                                <input type="text" id="discount" class="form-control">
+                        <div class="row mt-3">
+                            <div class="col-md-7">
+                                <div class="form-group mb- cash">
+                                    <label for="cash">Cash</label>
+                                    <input type="text" id="cash" class="form-control" required>
+                                    <div id="cash-label" class="invalid-feedback"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-5">
+                                <div class="form-group mb- discount">
+                                    <label for="discount">Discount</label>
+                                    <input type="text" id="discount" class="form-control" required>
+                                    <div id="discount-label1" class="invalid-feedback"></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-md-7">
-                            <div class="form-group mb- balance">
-                                <label for="customerId">Balance</label>
-                                <input type="text" id="balance" class="form-control">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb- Total">
+                                    <label>Total</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb- Total">
+                                    <label id="total-label"></label>
+                                </div>
                             </div>
                         </div>
 
-                    </div>
-
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group mb- Total">
-                                <label>Total</label>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb- Discount">
+                                    <label> Discount</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb- Discount">
+                                    <label id="discount-label"></label>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group mb- Discount">
-                                <label> Discount</label>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb- NetTotal">
+                                    <label>Net Total</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb- NetTotal">
+                                    <label id="net-total-label"></label>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group mb- NetTotal">
-                                <label>Net Total</label>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb- balance">
+                                    <label>Balance</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb- balance">
+                                    <label id="balance-label"></label>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <button class="btn btn-primary mt-3 fw-bold btn-lg">PURCHASE</button>
-
+                        <button class="btn btn-primary mt-3 fw-bold btn-lg" id="purchase-btn">PURCHASE</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-    <!--Customer table-->
+    <!--cart table-->
     <div class="row justify-content-center m-2 ">
         <div class="  col-lg-10   border border-light-subtle  mt-3  rounded shadow-card">
             <h1>Cart</h1>
             <div class="table-responsive">
                 <table class="p-5 table ">
-                    <!--Customer head-->
+                    <!--cart table head-->
                     <thead>
                     <th>Item Code</th>
                     <th>Item Name</th>
@@ -516,7 +499,7 @@
                     <th>Total</th>
                     <th>Action</th>
                     </thead>
-                    <!--Customer body-->
+                    <!--cart table body-->
                     <tbody id="cart-table-body">
                     <tr>
 
@@ -528,53 +511,41 @@
         </div>
     </div>
     <!-- View all order Modal -->
-    <div class="modal mdal" id="myModal">
-        <div class="modal-dialog">
+    <div class="modal fade bd-example-modal-xl " id="exampleModal-order" tabindex="-1"
+         aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
             <div class="modal-content">
-
                 <!-- Modal Header -->
                 <div class="modal-header">
                     <h4 class="modal-title">Modal Heading</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-
                 <!-- Modal body -->
                 <div class="modal-body">
-                    <table class="table table-striped">
+                    <table class="table">
                         <thead>
                         <tr>
                             <th>Order ID</th>
-                            <th>Customer Id</th>
                             <th>Customer Name</th>
+                            <th>Customer Nic</th>
                             <th>Item Code</th>
                             <th>Item Name</th>
                             <th>Qty</th>
-                            <th>Total </th>
+                            <th>Total</th>
+                            <th>Discount</th>
+                            <th>Net Total</th>
+                            <th>Date</th>
                         </tr>
                         </thead>
-                        <tbody>
-                        <tr>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>john@example.com</td>
-                        </tr>
-                        <tr>
-                            <td>Mary</td>
-                            <td>Moe</td>
-                            <td>mary@example.com</td>
-                        </tr>
-                        <tr>
-                            <td>July</td>
-                            <td>Dooley</td>
-                            <td>july@example.com</td>
-                        </tr>
+                        <tbody id="order-table-body">
+
                         </tbody>
                     </table>
                 </div>
 
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
                 </div>
 
             </div>
@@ -592,6 +563,7 @@
 <script type="module" src="assets/mvc/controller/customerController.js"></script>
 <script type="module" src="assets/mvc/controller/itemController.js"></script>
 <script type="module" src="assets/mvc/controller/orderController.js"></script>
+<script type="module" src="assets/mvc/controller/validation.js"></script>
 
 </body>
 </html>
