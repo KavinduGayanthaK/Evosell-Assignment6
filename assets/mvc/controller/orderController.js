@@ -95,6 +95,13 @@ $('#discount').on('keyup', function (e) {
     }
 });
 
+//cash action
+$('#cash').on('keyup', function (e) {
+    if (e.key === 'Enter' || e.keyCode === 13) {
+        let cash = $('#cash').val();
+        $('#balance-label').text(cash - $('#net-total-label').text());
+    }
+});
 
 //set date
 $(document).ready(function () {
