@@ -2,6 +2,7 @@ import {customerArray, orderArray} from "../db/db.js";
 import {cartArray} from "../db/db.js";
 import {itemArray} from "../db/db.js";
 import CartModel from "../model/cartModel.js";
+import OrderModel from "../model/orderModel.js";
 
 $("#item-code-order").on('keyup', function (e) {
     if (e.key === 'Enter' || e.keyCode === 13) {
@@ -27,15 +28,18 @@ $('#create-itembtn-order').on('click', () => {
     cartArray.push(cartObj);
     clearCreateItemFields();
     loadTableCart();
+
 })
 
+//item fields clear
 function clearCreateItemFields() {
-    $('#item-code-order').val("");
-    $('#item-name-order').val("");
-    $('#item-price-order').val("");
-    $('#item-qty-order').val("");
+    $('#item-code-order').val("").removeClass('is-valid is-invalid');;
+    $('#item-name-order').val("").removeClass('is-valid is-invalid');;
+    $('#item-price-order').val("").removeClass('is-valid is-invalid');;
+    $('#item-qty-order').val("").removeClass('is-valid is-invalid');;
 }
 
+//add data cart table
 function loadTableCart() {
     $('#cart-table-body').empty();
     cartArray.map((item, index) => {
@@ -47,19 +51,22 @@ function loadTableCart() {
                         <td class="total-value">${item.total}</td>
                         <td>
                             <button id="remove-btn" >remove</button>
-                       
                         </td>
                     </tr>`;
         $('#cart-table-body').append(record);
     });
+
+
 }
 
+//cart table remove button action
 $('#cart-table-body').on('click', '#remove-btn', function () {
     let recordIndexCart = $(this).closest('tr').index();
     cartArray.splice(recordIndexCart, 1);
     loadTableCart();
 });
 
+//select customer action
 $("#customerNic-order").on('keyup', function (e) {
     if (e.key === 'Enter' || e.keyCode === 13) {
         let customerNic = $('#customerNic-order').val();
@@ -71,13 +78,15 @@ $("#customerNic-order").on('keyup', function (e) {
     }
 });
 
-$(document).ready(function() {
-    // Create a new Date object to get the current date and time
+
+
+//set date
+$(document).ready(function () {
     let date = new Date();
-
-    // Format the date as yyyy-mm-dd for compatibility with HTML date input
     let formattedDate = date.toISOString().slice(0, 10);
-
-    // Set the formatted date as the value of the date field with id 'date'
     $('#date').val(formattedDate);
+    $('#order-id').val(10001);
+
 });
+
+
