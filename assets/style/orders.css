@@ -1,10 +1,10 @@
-
 /*body{overflow: hidden;*/
 /*    height: auto;*/
 /*}*/
-*{
+* {
     box-sizing: border-box;
 }
+
 .shadow-card {
     box-shadow: rgba(0, 0, 0, 0.3) 3px 3px 7px
 }
@@ -15,35 +15,49 @@ label {
 }
 
 
-.Total{
+.Total {
     margin-top: 40px;
 }
-.Total>label{
+
+.Total > label {
     font-family: Inter;
     font-weight: bold;
     color: blue;
     font-size: 30px;
 }
-.Discount{
+
+.Discount {
     margin-top: 8px;
 }
-.Discount>label{
+
+.Discount > label {
     font-family: Inter;
     font-weight: bold;
     margin-left: 5px;
 }
-.NetTotal{
+
+.NetTotal {
     margin-top: 8px;
 }
-.NetTotal>label{
+
+.NetTotal > label {
     font-family: Inter;
     font-weight: bold;
-    font-size:30px;
+    font-size: 30px;
     color: red;
     margin-left: 5px;
 
 }
 
-.mdal{
-    width: 1000px;!important;
+.balance {
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 30px;
+    color: #42c923;
+    margin-left: 5px;
+}
+
+.mdal {
+    width: 1000px;
+!important;
 }
