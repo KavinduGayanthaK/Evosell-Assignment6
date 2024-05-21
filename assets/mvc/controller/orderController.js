@@ -102,6 +102,11 @@ $('#cash').on('keyup', function (e) {
         $('#balance-label').text(cash - $('#net-total-label').text());
     }
 });
+//generate new id function
+function generateOrderId() {
+    let orderId = $('#order-id').val();
+    $('#order-id').val(+(orderId) + 1);
+}
 
 //set date
 $(document).ready(function () {
