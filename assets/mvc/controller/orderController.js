@@ -102,12 +102,72 @@ $('#cash').on('keyup', function (e) {
         $('#balance-label').text(cash - $('#net-total-label').text());
     }
 });
+
 //generate new id function
 function generateOrderId() {
     let orderId = $('#order-id').val();
     $('#order-id').val(+(orderId) + 1);
 }
 
+//purchase button action
+$('#purchase-btn').on('click', function () {
+    $("#cart-table-body tr").remove();
+    let orderId = $('#order-id').val();
+    let customerNic = $('#customerNic-order').val();
+    let date = $('#date').val();
+    let customerName = $('#customerName-order').val();
+    let total = $('#total-label').text();
+    let discount = $('#discount-label').text();
+    let netTotal = $('#net-total-label').text();
+
+    let itemCode = null;
+    let itemName = null;
+    let itemQty = null;
+
+    cartArray.forEach((item, index) => {
+        itemCode = `${item.itemCode}`;
+        itemName = `${item.itemName}`;
+        itemQty = `${item.itemQty}`;
+    })
+    let orderObj = new OrderModel(orderId, customerNic, customerName, itemCode, itemName, itemQty, total, discount, netTotal, date);
+    orderArray.push(orderObj);
+    loadOrderTable();
+    generateOrderId();
+    clearOrderField();
+});
+
+
+function loadOrderTable() {
+    console.log(orderArray);
+    $('#order-table-body').empty();
+    orderArray.map((item, index) => {
+        let record = `<tr>
+                            <td class="order-id-value">${item.orderId}</td>
+                            <td class="customer-name-value">${item.customerName}</td>
+                            <td class="customer-nic-value">${item.customerNic}</td>
+                            <td class="item-code-value">${item.itemCode}</td>
+                            <td class="item-name-value">${item.itemName}</td>
+                            <td class="qty-value">${item.qty}</td>
+                            <td class="total-value">${item.total}</td>
+                            <td class="discount-value">${item.discount}</td>
+                            <td class="net-tota-value">${item.netTotal}</td>
+                            <td class="date-value">${item.date}</td>             
+                        </tr>`;
+        $('#order-table-body').append(record)
+    })
+}
+
+function clearOrderField() {
+    $('#customerNic-order').val("");
+    $('#customerName-order').val("");
+    $('#discount').val("");
+    $('#cash').val("");
+    $('#total-label').text("");
+    $('#discount-label').text("");
+    $('#net-total-label').text("");
+    $('#balance-label').text("");
+
+}
 //set date
 $(document).ready(function () {
     let date = new Date();
