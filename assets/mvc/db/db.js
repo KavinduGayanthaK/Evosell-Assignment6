@@ -4,3 +4,5 @@ export let itemArray = [];
 
 export let orderArray = [];
 export let cartArray = [];
+
+export let userArray = [];
