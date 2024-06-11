@@ -5,10 +5,13 @@ let customerRecordIndex = undefined;
 
 
 $(document).ready(function () {
+    $('#customerId').val('C00-100');
+
     $('#create-customer-btn').on('click', (event) => {
         event.preventDefault();
 
         if ($('#create-customer-btn').text() === "CREATE CUSTOMER") {
+
             let customerId = $('#customerId').val();
             let customerName = $('#customerName').val();
             let customerAddress = $('#customerAddress').val();
@@ -19,6 +22,9 @@ $(document).ready(function () {
             clearFieldsCustomer();
             customerArray.push(customerObj);
             loadCustomerTable();
+            generateCustomerId(customerId);
+
+
         } else {
             let customerId1 = $('#customerId').val();
             let customerName1 = $('#customerName').val();
@@ -98,5 +104,15 @@ $(document).ready(function () {
         $('#customerEmail-update').val("");
         $('#customerNic-update').val("");
     }
+
+    function generateCustomerId(customerId) {
+        let split = customerId.split("-");
+        let split1 = +(split[1]) + 1;
+        let newNumericPart = split1.toString().padStart(split[1].length, '0');
+        let newCustomerId = split[0] + "-" + newNumericPart;
+        $('#customerId').val(newCustomerId);
+
+    }
+
 });
 
