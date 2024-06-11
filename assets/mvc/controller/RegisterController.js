@@ -16,17 +16,23 @@ $('#registerBtn').on('click', ()=>{
     }
 });
 $('#loginBtn').on('click', function() {
-    let userName = $('#InputUserNameLogin').val();
-    let password = $('#InputPasswordLogin').val();
+    let userName = "kavindu12";
+    let password = "kavi1234";
+    let userName1 = $('#InputUserNameLogin').val();
+    let password1 = $('#InputPasswordLogin').val();
     let userFound = false;
 
-    userArray.forEach((item, index) => {
-        if (userName === item.username && password === item.password) {
-            userFound = true;
-            // Redirect to home.html if user is found
-            window.location.href = 'home.html';
-        }
-    });
+    if (userName === userName1 && password === password1){
+        userFound = true;
+        window.location.href = 'home.html';
+    }
+    // userArray.forEach((item, index) => {
+    //     if (userName === item.username && password === item.password) {
+    //         userFound = true;
+    //         // Redirect to home.html if user is found
+    //         window.location.href = 'home.html';
+    //     }
+    // });
 
     if (!userFound) {
         alert('Invalid username or password');
