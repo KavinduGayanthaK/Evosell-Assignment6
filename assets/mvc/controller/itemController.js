@@ -6,7 +6,7 @@ $('#add-item-btn').on('click', () => {
     $('#createItemBtn').text("CREATE NEW ITEM");
     $('#exampleModalLabel-item').text("Add a new Item");
 });
-
+$('#ItemCode').val('I00-000');
 //create Item button action
 $('#createItemBtn').on('click', () => {
     if ($('#createItemBtn').text() === "CREATE NEW ITEM") {
@@ -19,6 +19,7 @@ $('#createItemBtn').on('click', () => {
         itemArray.push(itemObj);
         loadTableItem();
         clearItemFields();
+        generateItemCode(itemCode)
     } else {
         let itemCode1 = $('#ItemCode').val();
         let itemName1 = $('#ItemName').val();
@@ -94,15 +95,24 @@ function clearItemUpdateFields() {
     $('#ItemQty-update').val("");
 }
 
-$(document).ready(function () {
-    $('#exampleModal-item').on('hidden.bs.modal', function () {
-        $('#itemForm')[0].reset();
-        $('#itemForm .form-control').removeClass('is-valid is-invalid');
-    });
+function generateItemCode(itemCode) {
+    let split = itemCode.split("-");
+    let split1 = +(split[1]) + 1;
+    let newNumericPart = split1.toString().padStart(split[1].length, '0');
+    let newItemCode = split[0] + "-" + newNumericPart;
+    $('#ItemCode').val(newItemCode);
+}
 
+$(document).ready(function () {
+    // $('#exampleModal-item').on('hidden.bs.modal', function () {
+    //
+    //     $('#itemForm')[0].reset();
+    //     $('#itemForm .form-control').removeClass('is-valid is-invalid');
+    // });
+    //
     $('#createItemBtn').click(function (event) {
         event.preventDefault();
-        $('#itemForm')[0].reset();
+
         $('#itemForm .form-control').removeClass('is-valid is-invalid');
     });
 });
