@@ -1,5 +1,5 @@
-import ItemModel from "../model/itemModel.js";
-import {itemArray} from "../db/db.js";
+import ItemModel from '../model/itemModel.js';
+import {customerArray, itemArray} from '../db/db.js';
 
 let itemRecordIndex = undefined;
 $('#add-item-btn').on('click', () => {
@@ -39,6 +39,7 @@ $('#createItemBtn').on('click', () => {
 
 //load all item in item table
 function loadTableItem() {
+    $('#itemCount').text(itemArray.length);
     $('#item-table-body').empty();
     itemArray.map((item, index) => {
         let record = ` <tr>

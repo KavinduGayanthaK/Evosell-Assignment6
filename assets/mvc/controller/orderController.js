@@ -138,6 +138,7 @@ $('#purchase-btn').on('click', function () {
 
 
 function loadOrderTable() {
+    $('#orderCount').text(orderArray.length);
     console.log(orderArray);
     $('#order-table-body').empty();
     orderArray.map((item, index) => {

@@ -1,8 +1,7 @@
 import CustomerModel from "../model/customerModel.js";
-import {customerArray} from "../db/db.js";
+import { customerArray } from "../db/db.js";
 
 let customerRecordIndex = undefined;
-
 
 $(document).ready(function () {
     $('#customerId').val('C00-100');
@@ -11,7 +10,6 @@ $(document).ready(function () {
         event.preventDefault();
 
         if ($('#create-customer-btn').text() === "CREATE CUSTOMER") {
-
             let customerId = $('#customerId').val();
             let customerName = $('#customerName').val();
             let customerAddress = $('#customerAddress').val();
@@ -23,8 +21,6 @@ $(document).ready(function () {
             customerArray.push(customerObj);
             loadCustomerTable();
             generateCustomerId(customerId);
-
-
         } else {
             let customerId1 = $('#customerId').val();
             let customerName1 = $('#customerName').val();
@@ -72,17 +68,19 @@ $(document).ready(function () {
     });
 
     function loadCustomerTable() {
+        $('#customerCount').text(customerArray.length);
         $('#customer-table-body').empty();
-        customerArray.forEach((item, index) => {
+        customerArray.forEach((item) => {
+            $('#customerCount').text(item.c)
             let record = `<tr>
                 <td class="customerId-value">${item.customerID}</td>
                 <td class="customerName-value">${item.customerName}</td>
                 <td class="customerAddress-value">${item.customerAddress}</td>
                 <td class="customerEmail-value">${item.customerEmail}</td>
-                <td class="customerNic-value">${item.customerNic}</td>      
+                <td class="customerNic-value">${item.customerNic}</td>
                 <td>
                     <button id="customer-update-btn" data-bs-toggle="modal" data-bs-target="#exampleModal-customer">update</button>
-                    <button type="button" id="customer-delete-btn" >delete</button>
+                    <button type="button" id="customer-delete-btn">delete</button>
                 </td>
             </tr>`;
             $('#customer-table-body').append(record);
@@ -111,8 +109,5 @@ $(document).ready(function () {
         let newNumericPart = split1.toString().padStart(split[1].length, '0');
         let newCustomerId = split[0] + "-" + newNumericPart;
         $('#customerId').val(newCustomerId);
-
     }
-
 });
-
